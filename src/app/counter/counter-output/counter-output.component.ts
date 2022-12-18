@@ -10,9 +10,7 @@ import { counterState } from '../state/counter.state';
 })
 export class CounterOutputComponent implements OnInit {
 
-  counter:counterState | undefined;
-  counter$:Observable<{ counter: counterState; }> | undefined;
-  countersubscription:Subscription | undefined;
+  counter$: Observable<{ counter: counterState; }>;
   constructor(private store:Store<{counter:{counter:counterState}}>) { }
 
   ngOnInit(): void {
